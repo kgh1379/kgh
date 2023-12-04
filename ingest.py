@@ -26,7 +26,7 @@ embeddings = OpenAIEmbeddings()
 
 # Convert all chunks into vectors embeddings using Open AI embeddings
 # Store all vectors in FAISS index and save to local folder
-db = FAISS.from_documtns(docs, embeddings)
+db = FAISS.from_documents(docs, embeddings)
 db.save_local("faiss_index")
 
 print('Local FAISS index has been successfully saved.')
