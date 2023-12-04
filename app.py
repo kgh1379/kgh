@@ -5,7 +5,7 @@ from utils import load_chain
 compnay_logo = 'https://www.app.nl/wp-content/uploads/2019/01/Blendle.png'
 
 st.set_page_config(
-    page_title = "Gyehwan Notion Chatbot"
+    page_title = "Gyehwan Notion Chatbot",
     page_icon = compnay_logo
 )
 
