@@ -10,7 +10,7 @@ from langchain.prompts.chat import SystemMessagePromptTemplate
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-@st.cache_resource
+@st.cache
 def load_chain():
 		"""
     The `load_chain()` function initializes and configures a conversational retrieval chain for
