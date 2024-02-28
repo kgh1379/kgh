@@ -1,0 +1,22 @@
+RI_Inventory_Management/
+│
+├── main.py  # Main application entry point
+│
+├── pages/  # Directory for individual page modules
+│   ├── dashboard.py  # Dashboard view
+│   ├── inventory.py  # Inventory status view
+│   ├── usage.py  # Usage input view
+│   ├── stock_input.py  # Stock input view
+│   ├── purchase_requests.py  # Purchase request view
+│   ├── storage.py  # Storage view
+│   └── disposal.py  # Disposal view
+│
+├── utils/  # Directory for utility functions and modules
+│   ├── database.py  # Database related operations
+│   └── notifications.py  # Notification related operations
+│
+├── data/  # Directory for database files and CSVs
+│
+└── tests/  # Directory for test cases
+    ├── test_database.py
+    └── test_notifications.py
