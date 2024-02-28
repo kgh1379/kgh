@@ -1,12 +1,12 @@
 import streamlit as st
 import gdatabase as db
 from datetime import datetime, timedelta
-from docx import Document
-from docx2pdf import convert
+# from python_docx import Document
+from docx.shared import Pt
 import pythoncom
 
 def app():
-    st.sidebar.title("보라매 핵의학과")
+    st.sidebar.title("BRMH NM")
     category = st.sidebar.radio("RI", ["Mo-99 Generator", "방사성동위원소&의약품"])
 
     # Generator Section
