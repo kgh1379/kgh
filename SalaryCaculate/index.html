@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>급여 계산기</title>
+</head>
+<body>
+    <!-- 사용자 입력 필드 -->
+    <div>
+        <button onclick="calculateSalary()">급여 계산</button>
+    </div>
+
+    <!-- 급여 표시 섹션 -->
+    <div id="salary-display"></div>
+
+    <script>
+        // salaryData는 외부에서 불러온 급여 데이터를 가정합니다.
+        const salaryData = {/* JSON 데이터 삽입 */};
+
+        function calculateSalary() {
+            const salaryClass = document.getElementById('salary-class').value;
+            const yearsOfEmployment = document.getElementById('years-of-employment').value;
+
+            const classData = salaryData.salaryClassTable[salaryClass];
+            const tenureRate = getTenureAdditionSalaryRate(yearsOfEmployment);
+
+            // 기본 급여 계산
+            const standardBasicSalary = classData[yearsOfEmployment.toString()];
+            const adjustmentPay = salaryData.adjustmentPay;
+            const tenureAdditionSalary = (standardBasicSalary + (adjustmentPay / 2)) * tenureRate;
+            const basicSalary = standardBasicSalary + tenureAdditionSalary;
+
+            // 총 급여 계산
+            const totalSalary = basicSalary + /* 다른 수당 계산 로직 */;
+
+            // 급여 표시 업데이트
+            const salaryDisplaySection = document.getElementById('salary-display');
+            salaryDisplaySection.textContent = '총 급여: ' + totalSalary.toLocaleString() + '원';
+        }
+
+        function getTenureAdditionSalaryRate(yearsOfEmployment) {
+            // 근속 가산 급여율 계산 로직
+        }
+    </script>
+</body>
+</html>

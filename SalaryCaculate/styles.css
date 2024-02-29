@@ -1,0 +1,32 @@
+css_code = """
+body {
+    font-family: Arial, sans-serif;
+}
+
+.salary-calculator {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label, select, button, section {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#salary-display {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+#manual-edit-container {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}

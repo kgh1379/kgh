@@ -1,0 +1,137 @@
+{
+    "employeeId": 20842,
+    "yearsOfJoining": "2006-07-05",
+    "leaveOfAbsence": {
+        "start": "2022-08-08",
+        "end": "2023-01-09"
+    },
+    "salaryClass": {
+        "previous": {
+            "class": "J2",
+            "startYear": "2015-07-01"
+        },
+        "current": {
+            "class": "J3",
+            "startYear": "2016-01-01",
+            "yearsInClass": 8
+        }
+    },
+    "expectedRetirementYear": 2038,
+    "salaryClassDetails": {
+        "M1": {
+            "1": 3632400,
+            "2": 3663000,
+            "3": 3693500,
+            "4": 3724000,
+            "5": 3755300,
+            "6": 3786600,
+            "7": 3818800,
+            "8": 3851100,
+            "competencyPay": 1625200,
+            "bonus": 204000,
+            "householdSupportAllowance": 1217043
+        },
+        "S3": {
+            "1": 3364000,
+            "2": 3396900,
+            "3": 3429900,
+            "4": 3463900,
+            "5": 3498100,
+            "6": 3532000,
+            "7": 3566700,
+            "8": 3601500,
+            "competencyPay": 1350700,
+            "bonus": 197200,
+            "householdSupportAllowance": 1175725
+        },
+        "S2": {
+            "1": 3063800,
+            "2": 3094200,
+            "3": 3124900,
+            "4": 3155300,
+            "5": 3187300,
+            "6": 3218600,
+            "7": 3250633,
+            "8": 3282000,
+            "competencyPay": 1213200,
+            "bonus": 177300,
+            "householdSupportAllowance": 1055526
+        },
+        "S1": {
+            "1": 2766900,
+            "2": 2794100,
+            "3": 2821867,
+            "4": 2850100,
+            "5": 2878600,
+            "6": 2906500,
+            "7": 2935400,
+            "8": 2964200,
+            "competencyPay": 1075700,
+            "bonus": 157400,
+            "householdSupportAllowance": 934971
+        },
+        "J3": {
+            "1": 2463800,
+            "2": 2488300,
+            "3": 2513100,
+            "4": 2537800,
+            "5": 2562900,
+            "6": 2587700,
+            "7": 2613800,
+            "8": 2638800,
+            "competencyPay": 747100,
+            "bonus": 156700,
+            "householdSupportAllowance": 930678
+        }
+    },
+    "tenureAdditionSalaryRate": {
+        "1_to_5_years": 0.02,
+        "5_to_10_years": 0.05,
+        "10_to_15_years": 0.06,
+        "15_to_20_years": 0.07,
+        "20_plus_years": 0.08
+    },
+    "longTermServiceAllowance": {
+        "5_to_10_years": 50000,
+        "10_to_15_years": 60000,
+        "15_to_20_years": 80000,
+        "20_to_25_years": 100000,
+        "additional_21_years": 10000,
+        "additional_25_years": 30000
+    },
+    "severanceAllowancePaymentRate": {
+        "1_to_5_years": 0.1,
+        "5_to_10_years": 0.35,
+        "10_to_15_years": 0.45,
+        "15_to_20_years": 0.5,
+        "20_plus_years": 0.6
+    },
+    "severancePayPaymentRate": {
+        "1": 1,
+        "2": 2,
+        "30": 525
+    },
+    "holidaySupportAllowance": {
+        "calculation": "(Basic Salary + Adjustment Pay/2) * 50%"
+    },
+    "adjustmentPay": 301700,
+    "mealAssistanceAllowance": 150000,
+    "transportationAssistanceAllowance": 150000,
+    "holidaySupportAllowanceMonths": [
+        2,
+        5,
+        7,
+        9
+    ],
+    "householdSupportAllowanceMonths": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12
+    ]
+}
