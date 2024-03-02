@@ -62,37 +62,6 @@ function calculateSalary(date, employeeDetails) {
     return totalSalary;
 }
 
-// 근속 가산 급여율을 반환하는 함수
-function getTenureAdditionSalaryRate(yearsOfEmployment) {
-    // `salaryData.tenureAdditionSalaryRate`를 참조하여 근속 연수에 따른 가산율을 계산합니다.
-    // 여기에 로직 구현...
-}
-
-// 장기 근속 수당을 반환하는 함수
-function getLongTermServiceAllowance(yearsOfEmployment) {
-    // `salaryData.longTermServiceAllowance`를 참조하여 근속 연수에 따른 장기 근속 수당을 계산합니다.
-    // 여기에 로직 구현...
-}
-
-// 연차 수당을 계산하는 함수
-function calculateAnnualLeaveAllowance(annualLeaveDays, basicSalary, householdSupportAllowance, holidaySupportAllowance) {
-    // 연차 수당 계산 로직 구현...
-}
-
-// 초과 근무 수당을 계산하는 함수
-function calculateOvertimeWorkAllowance(overtimeHours, ordinaryWage) {
-    // 초과 근무 수당 계산 로직 구현...
-}
-
-// 휴일 근무 수당을 계산하는 함수
-function calculateHolidayWorkAllowance(holidayHours, ordinaryWage) {
-    // 휴일 근무 수당 계산 로직 구현...
-}
-
-// 야간 근무 수당을 계산하는 함수
-function calculateNightWorkAllowance(nightHours, ordinaryWage) {
-    // 야간 근무 수당 계산 로직 구현...
-}
 
 function isHolidayMonth(currentMonth) {
     // 명절 지원비가 지급되는 달: 설날(1월 또는 2월), 추석(8월 또는 9월), 5월, 7월

@@ -1,0 +1,38 @@
+# OpenAPI를 활용한 한국 국경일과 공휴일 API 연결해서 데이터 가져오기
+
+# 국경일 정보조회: getHoliDeInfo
+
+# 인증키: rdRLE%2FHyy67UTtFIWVweDWoayloqCbA5a%2FFrXMSKhdFefs%2FSkgl8VbtJMQsnzZhjkFWBEN6K4f%2FqqStu6Rhhig%3D%3D
+⦁	요청 / 응답 메시지 예제
+REST(URI)
+http://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getHoliDeInfo?solYear=2019&solMonth=03&ServiceKey=rdRLE%2FHyy67UTtFIWVweDWoayloqCbA5a%2FFrXMSKhdFefs%2FSkgl8VbtJMQsnzZhjkFWBEN6K4f%2FqqStu6Rhhig%3D%3D
+
+응답 메시지
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>NORMAL SERVICE.</resultMsg>
+</header>
+<body>
+<items>
+<item>
+<dateKind>01</dateKind>
+<dateName>삼일절</dateName>
+<isHoliday>Y</isHoliday>
+<locdate>20190301</locdate>
+<seq>1</seq>
+</item>
+</items>
+<numOfRows>10</numOfRows>
+<pageNo>1</pageNo>
+<totalCount>1</totalCount>
+</body>
+</response>
+
+# Python3 샘플 코드 #
+
+url = 'http://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getHoliDeInfo'
+params ={'serviceKey' : '서비스키', 'pageNo' : '1', 'numOfRows' : '10', 'solYear' : '2019', 'solMonth' : '02' }
+
+response = requests.get(url, params=params)
+print(response.content)

@@ -1,0 +1,20 @@
+20842 = {
+    "employeeId": 20842,
+    "yearsOfJoining": "2006-07-05",
+    "leaveOfAbsence": {
+        "start": "2022-08-08",
+        "end": "2023-01-09"
+    },
+    "salaryClass": {
+        "previous": {
+            "class": "J2",
+            "startYear": "2015-07-01"
+        },
+        "current": {
+            "class": "J3",
+            "startYear": "2016-01-01",
+            "yearsInClass": 8
+        }
+    },
+    "expectedRetirementYear": 2038
+}
