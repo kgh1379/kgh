@@ -1,4 +1,5 @@
-import json
+import os
+import sqlite3
 import streamlit as st
 from datetime import datetime, timedelta
 import requests
@@ -52,27 +53,38 @@ for item in root.findall('.//item'):
 #with open(r'C:\Users\kjh4253\Documents\GitHub\kgh\SalaryCalculate\salary_info.json', 'r') as file:
     #employee_info = json.load(file)
 
-# 데이터 로드 함수
-def load_json_data(file_path):
-    try:
-        with open(file_path, 'r') as file:
-            return json.load(file)
-    except FileNotFoundError:
-        st.error(f"{file_path} 파일을 찾을 수 없습니다.")
-        return None
+# 실제 폴더 경로 설정
+db_directory = "C:\\Users\\kjh4253\\Documents\\GitHub\\kgh\\SalaryCalculate"
+employee_info_db_name = 'employee_info.db'
+salary_info_db_name = 'salary_info.db'
 
-# 직원 데이터 및 급여 정보 로드
-employee_data = load_json_data(fr'C:\Users\kjh4253\Documents\GitHub\kgh\SalaryCalculate\{employee_id}.json')
-salary_info = load_json_data(r'C:\Users\kjh4253\Documents\GitHub\kgh\SalaryCalculate\salary_info.json')
+# 데이터베이스 파일의 전체 경로 구성
+employee_info_db_path = os.path.join(db_directory, employee_info_db_name)
+salary_info_db_path = os.path.join(db_directory, salary_info_db_name)
 
-# 데이터 로드 및 유효성 검증
-employee_data = load_json_data(f'{employee_id}.json')
-if not employee_data:
-    st.stop()
+# 데이터베이스 연결 및 커서 생성 함수
+def get_db_connection(db_path):
+    conn = sqlite3.connect(db_path)
+    return conn
 
-salary_info = load_json_data('salary_info.json')
-if not salary_info:
-    st.stop()
+# 직원 정보 로드 함수
+def load_employee_data(conn, employee_id):
+     with conn:
+        c = conn.cursor()
+        # employee_info 테이블에서 사원 정보 검색
+        c.execute("SELECT * FROM employee_info WHERE employeeId = ?", (employee_id,))
+        return c.fetchone()
+
+# 급여 정보 로드 함수
+def load_salary_info():
+    c.execute("SELECT * FROM salary_info")
+    return c.fetchall()
+
+# 직원 정보 로드
+employee_data = load_employee_data(employee_id)
+
+# 급여 정보 로드
+salary_info = load_salary_info()
 
 # 근무 연수 계산 함수
 def calculate_years_of_service(joining_date_str, current_date):

@@ -93,27 +93,7 @@
         "2": 2,
         "30": 525
     },
-    "holidaySupportAllowance": {
-        "calculation": "(Basic Salary + Adjustment Pay/2) * 50%"
-    },
     "adjustmentPay": 301700,
     "mealAssistanceAllowance": 150000,
-    "transportationAssistanceAllowance": 150000,
-    "holidaySupportAllowanceMonths": [
-        2,
-        5,
-        7,
-        9
-    ],
-    "householdSupportAllowanceMonths": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        10,
-        11,
-        12
-    ]
-}                                                         
+    "transportationAssistanceAllowance": 150000
+}
